@@ -22,7 +22,6 @@ using Microsoft.UI.Xaml.Input;
 using Windows;
 using Windows.UI.Core;
 using Windows.System;
-using System.Media;
 #endif
 
 namespace MauiGameAttempt8
