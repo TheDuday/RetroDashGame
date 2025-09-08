@@ -46,10 +46,10 @@ namespace MauiGameAttempt8
             InitializeComponent();
             playerSquare = new ColoredPolygon(new List<SKPoint> { new SKPoint(100, 100), new SKPoint(100, 200), new SKPoint(200, 200), new SKPoint(200, 100) }, new SKPaint { Color = new SKColor(0, 255, 255, 255) }, 0, 0, 30);
 
-            soundManager.LoadSound("enemy_hit", "C:\\Users\\Dudi\\source\\repos\\MauiGameAttempt8\\MauiGameAttempt8\\Resources\\Raw\\enemy_hit.wav");
-            soundManager.LoadSound("enemy_explodes", "C:\\Users\\Dudi\\source\\repos\\MauiGameAttempt8\\MauiGameAttempt8\\Resources\\Raw\\enemy_explodes.wav");
-            soundManager.LoadSound("background_music", "C:\\Users\\Dudi\\source\\repos\\MauiGameAttempt8\\MauiGameAttempt8\\Resources\\Raw\\epic_guitar_track.wav");
-            soundManager.PlayLoopingMusic("background_music");
+            //soundManager.LoadSound("enemy_hit", "C:\\Users\\Dudi\\source\\repos\\MauiGameAttempt8\\MauiGameAttempt8\\Resources\\Raw\\enemy_hit.wav");
+            //soundManager.LoadSound("enemy_explodes", "C:\\Users\\Dudi\\source\\repos\\MauiGameAttempt8\\MauiGameAttempt8\\Resources\\Raw\\enemy_explodes.wav");
+            //soundManager.LoadSound("background_music", "C:\\Users\\Dudi\\source\\repos\\MauiGameAttempt8\\MauiGameAttempt8\\Resources\\Raw\\epic_guitar_track.wav");
+            //soundManager.PlayLoopingMusic("background_music");
         }
         static SKColorFilter negativeFilter = SKColorFilter.CreateColorMatrix(new float[]
         {
@@ -455,12 +455,12 @@ namespace MauiGameAttempt8
         }
         async Task enemyHit(ColoredPolygon enemy)
         {
-            soundManager.Play("enemy_hit");
+            //soundManager.Play("enemy_hit");
             gameLoopTimer.Stop();
             currentAnimations.Add(generateEnemyDeathAnimation(enemy));
             screenShake(5);
             await Task.Delay(150);
-            soundManager.Play("enemy_explodes");
+            //soundManager.Play("enemy_explodes");
             screenShake(30);
             if (followingEnemies.Contains(enemy))
                 followingEnemies.Remove(enemy);
